@@ -1,4 +1,13 @@
-console.log("Git hub exercise");
+import express from 'express';
 
-console.log("Valid");
-console.log("Hello");
+const app = express();
+const port = process.env.PORT || 3000;
+
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
